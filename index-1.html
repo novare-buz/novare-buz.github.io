@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09080d">
+  <title>NØVARE — Бузулук</title>
+  <meta name="description" content="Информационная страница NØVARE в Бузулуке: адреса магазинов, график работы и контакты.">
+  <style>
+    :root{--bg:#09080d;--panel:#14111b;--purple:#b56cff;--purple2:#7d35c7;--muted:#b8adbf;--white:#f8f4fb}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 50% 0%,#261333 0%,#100c16 34%,var(--bg) 72%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    header{padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .brand{font-size:clamp(24px,4vw,34px);font-weight:1000;letter-spacing:2px;text-shadow:0 0 8px #b56cff,0 0 24px #8c3dd6}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{text-decoration:none;color:var(--muted);font-size:14px}
+    nav a:hover{color:white}
+    .hero{min-height:520px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:60px 0}
+    .hero:before,.hero:after{content:"";position:absolute;width:360px;height:90px;border:3px solid #a94eff;filter:blur(18px);opacity:.23;transform:rotate(-17deg);pointer-events:none}
+    .hero:before{left:-120px;top:25%}.hero:after{right:-120px;bottom:20%;transform:rotate(16deg)}
+    .tag{color:var(--purple);font-weight:800;letter-spacing:5px;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(64px,14vw,150px);line-height:.88;margin:22px 0 16px;font-weight:1000;letter-spacing:-7px;transform:rotate(-3deg);text-shadow:3px 3px 0 #4d2074,7px 7px 0 #24102f,0 0 22px #b56cff;animation:paint .95s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes paint{0%{opacity:0;clip-path:inset(0 100% 0 0);filter:blur(8px);transform:translateX(-30px) rotate(-7deg)}65%{opacity:1;clip-path:inset(0 0 0 0);filter:blur(0);transform:translateX(4px) rotate(1deg)}100%{transform:rotate(-3deg)}}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 26px}
+    .cta{display:inline-block;padding:13px 22px;border:1px solid var(--purple);border-radius:999px;text-decoration:none;background:#21132e;box-shadow:0 0 22px #8f40ce33;font-weight:700}
+    section{padding:54px 0}
+    .section-title{font-size:clamp(28px,5vw,42px);margin:0 0 10px}
+    .section-lead{color:var(--muted);margin:0 0 26px;line-height:1.6}
+    .shops{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{background:linear-gradient(145deg,#1b1523,#100e14);border:1px solid #53336d;border-radius:20px;padding:22px;box-shadow:0 12px 36px #0005}
+    .number{color:var(--purple);font-weight:800;letter-spacing:2px;font-size:12px}
+    h3{font-size:23px;margin:10px 0}
+    .address{color:var(--muted);line-height:1.6;min-height:48px}
+    .hours{margin:18px 0 16px;font-weight:700}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .small-link{font-size:14px;text-decoration:none;border:1px solid #674487;padding:10px 13px;border-radius:10px}
+    .video-slot{margin-top:18px;aspect-ratio:16/9;border:1px dashed #8052a5;border-radius:14px;display:grid;place-items:center;text-align:center;color:#bfa9d0;background:repeating-linear-gradient(135deg,#1a1322,#1a1322 12px,#17111e 12px,#17111e 24px);padding:14px}
+    .video-slot small{display:block;color:#9887a3;margin-top:7px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+    .socials a{padding:11px 14px;background:#21152c;border:1px solid #5c3976;border-radius:10px;text-decoration:none}
+    .notice{font-size:13px;color:#a99daf;line-height:1.6;border-top:1px solid #30243a;padding:22px 0 30px;margin-top:30px}
+    footer{padding:26px 0;color:#91869a;font-size:13px}
+    @media(max-width:700px){header{align-items:flex-start;flex-direction:column}.shops,.contact-grid{grid-template-columns:1fr}.hero{min-height:440px}h1{letter-spacing:-4px}.address{min-height:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1{animation:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">NØVARE</div>
+    <nav aria-label="Основная навигация">
+      <a href="#shops">Магазины</a><a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <div class="tag">город Бузулук</div>
+        <h1>NØVARE</h1>
+        <p>Две точки в Бузулуке. Ежедневно с 10:00 до 22:00.</p>
+        <a class="cta" href="#shops">Адреса магазинов</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="shops">
+      <div class="tag">где нас найти</div>
+      <h2 class="section-title">Наши магазины</h2>
+      <p class="section-lead">Информация об адресах и режиме работы.</p>
+      <div class="shops">
+        <article class="card">
+          <div class="number">ТОЧКА 01</div>
+          <h3>1-я линия, 47А</h3>
+          <div class="address">Бузулук, Оренбургская область<br>Напротив вокзала</div>
+          <div class="hours">Ежедневно · 10:00–22:00</div>
+          <div class="actions">
+            <a class="small-link" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Бузулук%2C%201-я%20линия%2C%2047А">Открыть на карте</a>
+            <a class="small-link" target="_blank" rel="noopener" href="https://yandex.ru/maps/?rtext=~Бузулук%2C%201-я%20линия%2C%2047А">Построить маршрут</a>
+          </div>
+          <div class="video-slot">Здесь будет видео первой точки<small>Видео добавим отдельным файлом при следующем обновлении сайта</small></div>
+        </article>
+        <article class="card">
+          <div class="number">ТОЧКА 02</div>
+          <h3>Суворова, 36</h3>
+          <div class="address">Бузулук, Оренбургская область<br>Район Рассвет</div>
+          <div class="hours">Ежедневно · 10:00–22:00</div>
+          <div class="actions">
+            <a class="small-link" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Бузулук%2C%20Суворова%2C%2036">Открыть на карте</a>
+            <a class="small-link" target="_blank" rel="noopener" href="https://yandex.ru/maps/?rtext=~Бузулук%2C%20Суворова%2C%2036">Построить маршрут</a>
+          </div>
+          <div class="video-slot">Место для видео второй точки<small>Добавим, когда появится возможность прислать запись</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contacts">
+      <div class="tag">оставайтесь на связи</div>
+      <h2 class="section-title">Контакты</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Социальные сети</h3>
+          <p class="section-lead">Официальные страницы NØVARE.</p>
+          <div class="socials">
+            <a href="https://vk.ru/novare_buz" target="_blank" rel="noopener">ВКонтакте</a>
+            <a href="https://t.me/novarevape" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://www.instagram.com/novarebuzuluk?rpxt=b2ZkdHQxb2lqeWJ1" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>График работы</h3>
+          <p class="section-lead">Обе точки работают ежедневно<br><strong style="color:#fff">с 10:00 до 22:00</strong></p>
+          <p style="color:#b8adbf;line-height:1.6">Бузулук, Оренбургская область</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="notice">Информационная страница об адресах и режиме работы. Перед публикацией необходимо проверить весь контент и оформление на соответствие действующему законодательству Российской Федерации. Раздел с отзывами пока не публикуется до отдельной правовой проверки.</div>
+    © NØVARE
+  </footer>
+</body>
+</html>
